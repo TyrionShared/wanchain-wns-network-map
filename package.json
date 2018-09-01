@@ -1,14 +1,14 @@
 {
   "name": "wanchain-wns-network-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple map of wanchain networks to WNS registry addresses.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/TyrionShared/wanchain-wns-network-map.git"
+    "url": "git+ssh://git@github.com/WanJS/wanchain-wns-network-map.git"
   },
   "keywords": [
     "wanchain",
@@ -17,7 +17,7 @@
   "author": "Tyrion70",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TyrionShared/wanchain-wns-network-map/issues"
+    "url": "https://github.com/WanJS/wanchain-wns-network-map/issues"
   },
-  "homepage": "https://github.com/TyrionShared/wanchain-wns-network-map#readme"
+  "homepage": "https://github.com/WanJS/wanchain-wns-network-map#readme"
 }
