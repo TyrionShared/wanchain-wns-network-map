@@ -1,21 +1,21 @@
-# Ethereum ENS Network Map
+# Wanchain WNS Network Map
 
-A simple mapping of ethereum network IDs to Ethereum ENS addresses, when available.
+A simple mapping of wanchain network IDs to Wanchain WNS addresses, when available.
 
 The network IDs are stringified integers.
 
-The addresses are hex-prefixed ethereum addresses.
+The addresses are hex-prefixed wanchain addresses.
 
 ## Usage
 
-`npm install ethereum-ens-network-map --save`
+`npm install wanchain-wns-network-map --save`
 
 ```javascript
-var ensNetworkMap = require('ethereum-ens-network-map')
+var wnsNetworkMap = require('wanchain-wns-network-map')
 
 web3.version.getNetwork(function (err, networkId) {
 
-  var ensAddress = ensNetworkMap[networkId]
+  var wnsAddress = wnsNetworkMap[networkId]
   // Initialize your client from this!
 
 })
