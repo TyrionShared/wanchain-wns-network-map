@@ -4,7 +4,10 @@
   "description": "A simple map of wanchain networks to WNS registry addresses.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Success: no tests specified\" && exit 0",
+    "test:unit": "cross-env WANWALLET_ENV=test mocha --exit --require test/setup.js --recursive \"test/unit/**/*.js\" \"/app/**/*.test.js\"",
+    "test:coverage": "nyc npm run test:unit && npm run test:coveralls-upload",
+    "test:coveralls-upload": "if [ $COVERALLS_REPO_TOKEN ]; then nyc report --reporter=text-lcov | coveralls; fi"
   },
   "repository": {
     "type": "git",
