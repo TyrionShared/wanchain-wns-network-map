@@ -43,14 +43,14 @@ jobs:
           name: Install npm 6 + deps via npm
           command: |
            sudo npm install -g npm@6 && npm install --no-save
-      - persist_to_workspace:
-          root: .
-          paths:
-          - node_modules
-      - save_cache:
-          key: v1.0-dependency-cache-{{ checksum "package-lock.json" }}
-          paths:
-            - node_modules
+#      - persist_to_workspace:
+#          root: .
+#          paths:
+#          - node_modules
+#      - save_cache:
+#          key: v1.0-dependency-cache-{{ checksum "package-lock.json" }}
+#          paths:
+#            - node_modules
   test:
     docker:
       - image: circleci/node:10
