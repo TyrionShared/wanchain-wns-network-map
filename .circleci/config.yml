@@ -5,9 +5,6 @@ workflows:
   full_test:
     jobs:
       - prep-deps-npm
-      - test:
-          requires:
-            - prep-deps-npm
 #      - test-lint:
 #          requires:
 #            - prep-deps-npm
@@ -42,9 +39,6 @@ jobs:
           root: .
           paths:
           - node_modules
-      - save_cache:
-          key: v1.0-dependency-cache-{{ checksum "package-lock.json" }}
-          paths:
   test-lint:
     docker:
       - image: circleci/node:10
