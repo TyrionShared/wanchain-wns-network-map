@@ -1,11 +1,10 @@
 {
   "name": "wanchain-wns-network-map",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple map of wanchain networks to WNS registry addresses.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Success: no tests specified\" && exit 0",
-    "test:unit": "cross-env WANWALLET_ENV=test mocha --exit --require test/setup.js --recursive \"test/unit/**/*.js\" \"/app/**/*.test.js\"",
+    "test:unit": "node test",
     "test:coverage": "nyc npm run test:unit && npm run test:coveralls-upload",
     "test:coveralls-upload": "if [ $COVERALLS_REPO_TOKEN ]; then nyc report --reporter=text-lcov | coveralls; fi"
   },
@@ -22,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/WanJS/wanchain-wns-network-map/issues"
   },
-  "homepage": "https://github.com/WanJS/wanchain-wns-network-map#readme"
+  "homepage": "https://github.com/WanJS/wanchain-wns-network-map#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nyc": "^13.0.1",
+    "tape": "^4.9.1"
+  }
 }
