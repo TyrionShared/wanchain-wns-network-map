@@ -5,9 +5,6 @@ workflows:
   full_test:
     jobs:
       - prep-deps-npm
-      - prep-build:
-          requires:
-            - prep-deps-npm
       - test:
           requires:
             - prep-deps-npm
@@ -28,7 +25,6 @@ workflows:
               only: master
           requires:
             - prep-deps-npm
-            - prep-build
             - all-tests-pass
 jobs:
   prep-deps-npm:
